@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import { Routes,Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
@@ -7,8 +7,22 @@ import LoginPage from "./pages/LoginPage";
 import SettingsPage from "./pages/SettingsPage";
 import ProfilePage from "./pages/ProfilePage";
 import './App.css';
+import { useAuthStore } from "./store/useAuthStore";
 
 const App = () => {
+
+  const {authUser,checkAuth}=useAuthStore()  
+
+  useEffect (() => {
+    const checkUser = async () => {
+      await checkAuth();
+    };
+    checkUser();
+  }
+  , [checkAuth]);
+
+  console.log("Auth User:", authUser);
+
   return (
     <div >
         <Navbar />
