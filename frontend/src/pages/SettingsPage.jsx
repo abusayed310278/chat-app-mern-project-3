@@ -9,3 +9,5 @@ const SettingsPage = () => {
 };
 
 export default SettingsPage;
+
+//before i using daisyUi and    tailwindcss i used bootstrap and react-bootstrap
