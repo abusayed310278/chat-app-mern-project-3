@@ -1,13 +1,13 @@
+import daisyui from 'daisyui'
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}", // Ensure all source files are covered
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {}, // You can extend Tailwind here if needed
+    extend: {},
   },
-  plugins: [
-    require('daisyui'), // DaisyUI plugin
-  ],
+  plugins: [daisyui],
 }
