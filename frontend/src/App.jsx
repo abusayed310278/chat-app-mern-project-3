@@ -11,7 +11,7 @@ import { useAuthStore } from "./store/useAuthStore";
 
 const App = () => {
 
-  const {authUser,checkAuth}=useAuthStore()  
+  const {authUser,checkAuth,isCheckingAuth}=useAuthStore()  
 
   useEffect (() => {
     const checkUser = async () => {
@@ -22,6 +22,35 @@ const App = () => {
   , [checkAuth]);
 
   console.log("Auth User:", authUser);
+
+  if(!isCheckingAuth &&!authUser)return(
+    <Loader className="size-10 animate-spain" />
+    
+  )
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   return (
     <div >
