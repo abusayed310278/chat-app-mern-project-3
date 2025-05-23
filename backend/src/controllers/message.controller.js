@@ -1,6 +1,8 @@
 import User from    "../models/user.model.js";
 import Message from "../models/message.model.js";
 
+import cloudinary from "../lib/cloudinary.js";
+
 export const getUsersForSider = async (req, res) => {   
   try {
     const { userId } = req.user; // Get the userId from the request object
